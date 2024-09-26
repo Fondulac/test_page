@@ -1,0 +1,39 @@
+{
+	"nodes":[
+		{"id":"bc9c05eb89965130","type":"text","text":"if recur > 0","x":-540,"y":-1020,"width":250,"height":60},
+		{"id":"cd7659c81df4e7b4","type":"text","text":"cloner(URL, recur, dictionary)","x":-600,"y":-1220,"width":310,"height":60},
+		{"id":"9a2d7860eec95303","type":"text","text":"return dictionary","x":-540,"y":-820,"width":250,"height":60},
+		{"id":"cdee6e725f6d7bfd","type":"text","text":"for sub-URL in URL","x":-140,"y":-1020,"width":250,"height":60},
+		{"id":"7551defab8fb38ca","type":"text","text":"append to DICT","x":120,"y":-1220,"width":250,"height":60},
+		{"id":"f3cd6f8edebd570e","type":"text","text":"function call ","x":-265,"y":-660,"width":250,"height":60},
+		{"id":"bcf1ca2d74d40f28","type":"text","text":"format link","x":-265,"y":-540,"width":250,"height":60},
+		{"id":"7bb994dceb279608","type":"text","text":"make request","x":-265,"y":-420,"width":250,"height":60},
+		{"id":"21ab7e4c417ea2c4","type":"text","text":"recursive call","x":-265,"y":-300,"width":250,"height":60},
+		{"id":"e3c1b7a513f5ed3d","type":"text","text":"modify href","x":-265,"y":-180,"width":250,"height":60},
+		{"id":"34c7b255831c93fe","type":"text","text":"modify other fields","x":-265,"y":-60,"width":250,"height":60},
+		{"id":"f18706275cacba09","type":"text","text":"create html file in index folder of campaign","x":-265,"y":60,"width":250,"height":60},
+		{"id":"6e10a4edad36690b","type":"text","text":"URL Types\n/relative\nhttp://www.domain.com/subdir\nhttp://domain.com\nhttp://subdomain.domain.com\n","x":-920,"y":-880,"width":300,"height":220},
+		{"id":"97264c99c831a953","x":-920,"y":-540,"width":250,"height":60,"type":"text","text":"http in domain?"},
+		{"id":"39a5f68235f0d128","x":-740,"y":-400,"width":400,"height":100,"type":"text","text":"link\\[\"href\"\\] = IP:PORT/link\\[\"href\"\\]\nROUTE = \"/relative-route\"\nfilename = routenamewithoutslashes.html"},
+		{"id":"062a0984d18c1a7d","x":-1250,"y":-400,"width":330,"height":50,"type":"text","text":"is domain different than the base?"},
+		{"id":"c60f83cb13024767","x":-1580,"y":-205,"width":440,"height":110,"type":"text","text":"link\\[\"href\"] = IP:PORT/domaincom/relative_route\nROUTE = domaincom/relative_route\nfilename = domaincomrelative_route.html"},
+		{"id":"b422b32975409d2f","x":-1002,"y":-205,"width":465,"height":110,"type":"text","text":"link\\[\"href\"] = IP:PORT/domaincom/relative_route\nROUTE = domaincom/relative_route\nfilename = domaincomrelative_route.html"}
+	],
+	"edges":[
+		{"id":"54a6a6d0c0bfae5b","fromNode":"bc9c05eb89965130","fromSide":"bottom","toNode":"9a2d7860eec95303","toSide":"top","label":"== 0"},
+		{"id":"0611e34f875e96bf","fromNode":"cd7659c81df4e7b4","fromSide":"bottom","toNode":"bc9c05eb89965130","toSide":"top"},
+		{"id":"418e1fc60f740c8c","fromNode":"bc9c05eb89965130","fromSide":"right","toNode":"cdee6e725f6d7bfd","toSide":"left","label":"> 0"},
+		{"id":"83e3b2b735c45e52","fromNode":"7551defab8fb38ca","fromSide":"left","toNode":"cd7659c81df4e7b4","toSide":"right","label":"URL, recur - 1"},
+		{"id":"67308c9738858b00","fromNode":"cdee6e725f6d7bfd","fromSide":"right","toNode":"7551defab8fb38ca","toSide":"bottom"},
+		{"id":"6e4cdea0c0ec1af3","fromNode":"f3cd6f8edebd570e","fromSide":"bottom","toNode":"bcf1ca2d74d40f28","toSide":"top"},
+		{"id":"094da17a0057b017","fromNode":"bcf1ca2d74d40f28","fromSide":"bottom","toNode":"7bb994dceb279608","toSide":"top"},
+		{"id":"5bb73f6d18b1813e","fromNode":"7bb994dceb279608","fromSide":"bottom","toNode":"21ab7e4c417ea2c4","toSide":"top"},
+		{"id":"032bd660eaa56ed2","fromNode":"21ab7e4c417ea2c4","fromSide":"bottom","toNode":"e3c1b7a513f5ed3d","toSide":"top"},
+		{"id":"002d72a88ed2cf2c","fromNode":"e3c1b7a513f5ed3d","fromSide":"bottom","toNode":"34c7b255831c93fe","toSide":"top"},
+		{"id":"a099559d3003ea37","fromNode":"34c7b255831c93fe","fromSide":"bottom","toNode":"f18706275cacba09","toSide":"top"},
+		{"id":"150175c5b1ae0d5c","fromNode":"97264c99c831a953","fromSide":"left","toNode":"062a0984d18c1a7d","toSide":"top","label":"Y"},
+		{"id":"e8eaee46a7f5eb2a","fromNode":"97264c99c831a953","fromSide":"right","toNode":"39a5f68235f0d128","toSide":"top","label":"N"},
+		{"id":"d32a00ff50d00a8c","fromNode":"062a0984d18c1a7d","fromSide":"left","toNode":"c60f83cb13024767","toSide":"top","label":"Y"},
+		{"id":"ed1f4f5805cfeaa3","fromNode":"062a0984d18c1a7d","fromSide":"right","toNode":"b422b32975409d2f","toSide":"top","label":"N"}
+	]
+}
