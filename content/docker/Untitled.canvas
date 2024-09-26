@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"bb68e96012785e93","x":-200,"y":-460,"width":250,"height":60,"type":"text","text":"Op Comp"},
+		{"id":"b1d36422488e788f","x":-200,"y":-260,"width":250,"height":60,"type":"text","text":"Requests"},
+		{"id":"8c2d5c17b42b3257","x":-200,"y":-60,"width":250,"height":60,"type":"text","text":"Deployments"},
+		{"id":"57a5cf12a48d6b0b","x":180,"y":-160,"width":250,"height":60,"type":"text","text":"Relay Server"}
+	],
+	"edges":[
+		{"id":"549aa471e5a631f2","fromNode":"bb68e96012785e93","fromSide":"bottom","toNode":"b1d36422488e788f","toSide":"top","label":"copy and paste yaml into issue"},
+		{"id":"2888012b1f555b1e","fromNode":"b1d36422488e788f","fromSide":"right","toNode":"57a5cf12a48d6b0b","toSide":"top","label":"webhook sends info to"},
+		{"id":"676f2f44bee7a604","fromNode":"57a5cf12a48d6b0b","fromSide":"bottom","toNode":"8c2d5c17b42b3257","toSide":"right","label":"forwarded to"},
+		{"id":"de9e87dd42d0e108","fromNode":"57a5cf12a48d6b0b","fromSide":"left","toNode":"b1d36422488e788f","toSide":"bottom","label":"updates sent back to"}
+	]
+}

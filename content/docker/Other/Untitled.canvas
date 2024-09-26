@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"74800f84384fb0ba","type":"text","text":"Hives","x":-140,"y":240,"width":120,"height":60},
+		{"id":"2f1c157c77dc23b3","type":"text","text":"User Information \n\n440x306\n","x":-240,"y":-160,"width":250,"height":170},
+		{"id":"23a5056a5cd77e72","type":"text","text":"Network Information \n\n440x306","x":40,"y":-160,"width":250,"height":170},
+		{"id":"f00ee99e02247de8","type":"text","text":"URIs and \n\n888x306","x":-240,"y":20,"width":530,"height":160},
+		{"id":"7b6aee797c1c01a3","type":"text","text":"View Timeline","x":110,"y":130,"width":180,"height":50},
+		{"id":"dc1941807fe6531e","type":"text","text":"Map (wifi) \n\n440x621","x":-520,"y":-160,"width":250,"height":340},
+		{"id":"c665ee6d4771345b","x":-180,"y":-280,"width":250,"height":60,"type":"text","text":"grid-template-columns: 10px 440px 400px 440px 10px"}
+	],
+	"edges":[]
+}
