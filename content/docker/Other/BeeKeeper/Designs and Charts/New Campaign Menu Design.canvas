@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"b78851ee52fd740b","type":"text","text":"Options\n\nURI to page [------------------]\n\nRecursiveness (how many layers) [-----------------------]\n\nScripts [------------] \n","x":-400,"y":-420,"width":860,"height":600},
-		{"id":"a31761ea331505e5","type":"text","text":"x     script 1\nx     script 2","x":-380,"y":-240,"width":460,"height":320},
-		{"id":"0b45884922b856b4","type":"text","text":"Generate (yellow checkmark)","x":-380,"y":100,"width":300,"height":60},
-		{"id":"67fcec6f775ec293","type":"text","text":"Close (red X)","x":200,"y":100,"width":250,"height":60}
-	],
-	"edges":[]
-}
