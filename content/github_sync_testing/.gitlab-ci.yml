@@ -1,0 +1,47 @@
+stages:
+    - copy_to_branch  #copy the main branch to the staging branch
+    - remove_files #check files for tags, delete from staging branch, add to .gitignore file
+    - register_remote #register the remote github repo
+    - push_to_remote #push changes in the github repo to gitlab
+
+before_script:
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - apt install git -y
+    - git remote remove origin
+    - git remote add origin https://github_sync_testing:$PROJECT_TOKEN@git.nopsled.me/jboyd/github_sync_testing.git
+    - git config --global user.email "jboyd@blackhillsinfosec.com"
+    - git config --global user.name "jboyd"
+    - rm .gitlab-ci.yml
+
+copy_to_branch:
+    stage: copy_to_branch
+    script:
+        - git add .
+        - git commit --allow-empty -m "pushing changes to gitlab_staging branch"
+        - git push origin HEAD:github_staging_area --force
+
+remove_files:
+    stage: remove_files
+    script:
+        #checkout and pull the updated staging branch
+        - git fetch
+        - git checkout origin/github_staging_area
+        - git pull origin github_staging_area
+
+        #check for directories containing the .no-antisyphon-clone file and delete the dir
+
+        
+        #check for files containing the no-antisyphon-clone tag and delete them
+        - for file in $(grep -l -d skip -r no-antisyphon-clone *); do rm $file; done
+        - for pathway in $(find . -name ".no-antisyphon-clone" -print); do rm -r $(dirname $pathway); done
+
+        #push the files back to the clone
+        - git fetch github
+        - git add .
+        - git commit --allow-empty -m "pushing updated folders"
+        - git push origin HEAD:github_staging_area --force
+
+    
+
+
+
